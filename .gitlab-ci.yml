@@ -3,17 +3,16 @@ stages:
   - test
   - deploy
 
-.template-test-debian-gcc:
+.template-test-gcc:
   stage: test
-  image: $CI_GROUP_REGISTRY/$CI_JOB_NAME:latest
+  image: $CI_IMAGE_GCC:12
   script:
     - make check
 
-build-debian-gcc:
+build-gcc:
   stage: build
   image: $IMAGE
   script:
-    - echo ${CI_JOB_NAME}
     - make all CC=gcc
   artifacts:
     paths:
@@ -21,32 +20,48 @@ build-debian-gcc:
       - test/build/
   parallel:
     matrix:
-      - IMAGE: ['$CI_IMAGE_DEBIAN_GCC-7:latest', '$CI_IMAGE_DEBIAN_GCC-8:latest', '$CI_IMAGE_DEBIAN_GCC-9:latest', '$CI_IMAGE_DEBIAN_GCC-10:latest']
+      - IMAGE: [
+          "$CI_IMAGE_GCC:7",
+          "$CI_IMAGE_GCC:8",
+          "$CI_IMAGE_GCC:9",
+          "$CI_IMAGE_GCC:10",
+          "$CI_IMAGE_GCC:11",
+          "$CI_IMAGE_GCC:12"
+        ]
 
-test-debian-gcc-7:
-  extends: .template-test-debian-gcc
-  needs: ["build-debian-gcc: [$CI_IMAGE_DEBIAN_GCC-7:latest]"]
+test-gcc-7:
+  extends: .template-test-gcc
+  needs: ["build-gcc: [$CI_IMAGE_GCC:7]"]
 
-test-debian-gcc-8:
-  extends: .template-test-debian-gcc
-  needs: ["build-debian-gcc: [$CI_IMAGE_DEBIAN_GCC-8:latest]"]
+test-gcc-8:
+  extends: .template-test-gcc
+  needs: ["build-gcc: [$CI_IMAGE_GCC:8]"]
 
-test-debian-gcc-9:
-  extends: .template-test-debian-gcc
-  needs: ["build-debian-gcc: [$CI_IMAGE_DEBIAN_GCC-9:latest]"]
+test-gcc-9:
+  extends: .template-test-gcc
+  needs: ["build-gcc: [$CI_IMAGE_GCC:9]"]
 
-test-debian-gcc-10:
-  extends: .template-test-debian-gcc
-  needs: ["build-debian-gcc: [$CI_IMAGE_DEBIAN_GCC-10:latest]"]
+test-gcc-10:
+  extends: .template-test-gcc
+  needs: ["build-gcc: [$CI_IMAGE_GCC:10]"]
+
+test-gcc-11:
+  extends: .template-test-gcc
+  needs: ["build-gcc: [$CI_IMAGE_GCC:11]"]
+
+test-gcc-12:
+  extends: .template-test-gcc
+  needs: ["build-gcc: [$CI_IMAGE_GCC:12]"]
 
 pages:
   stage: deploy
-  image: $CI_GROUP_REGISTRY/doc:latest
+  image: $CI_IMAGE_DOXYGEN:latest
   script:
     - make doc
     - mv doc/doxygen/html public
   artifacts:
     paths:
       - public
+  dependencies: []
   rules:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
