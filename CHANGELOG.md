@@ -13,6 +13,10 @@ which says in its summary:
 
 ## [Unreleased]
 
+## [0.2.0]
+
+(2023-01-24)
+
 ### Added
 
 - `ctk_error.h`
