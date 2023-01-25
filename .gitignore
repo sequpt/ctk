@@ -11,7 +11,7 @@ analysis/
 # Build
 build/
 
-# clangd
+# Clang
 .cache/
 .clang-format
 .clang-tidy
@@ -28,27 +28,30 @@ doxygen/
 # Executables
 *.out
 
-# IDE
-.vscode/
-
 # External
 external/include
 external/lib
+
+# IDE
+.vscode/
 
 # Logs
 *.log
 log/
 
+# Misc
+scratchpad
+
 # Object files
 *.o
 obj/
 
-# Static libraries
-*.a
+# Scripts
+*.sh
 
 # Shared objects
 *.so
 *.so.*
 
-# Scripts
-*.sh
+# Static libraries
+*.a
