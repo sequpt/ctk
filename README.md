@@ -1,8 +1,8 @@
 # CTK - C Toolkit
 
-[![pipeline status](https://gitlab.com/callback/ctk/badges/master/pipeline.svg)](https://gitlab.com/callback/ctk/-/commits/master)
+[![pipeline status](https://gitlab.com/sequpt/ctk/badges/master/pipeline.svg)](https://gitlab.com/sequpt/ctk/-/commits/master)
 [![license](https://img.shields.io/badge/license-0BSD-blue)](LICENSE)
-[![doxygen](https://img.shields.io/badge/doc-doxygen-blue)](https://callback.gitlab.io/ctk)
+[![doxygen](https://img.shields.io/badge/doc-doxygen-blue)](https://sequpt.gitlab.io/ctk)
 
 A `C11` library providing some convenient, portable and safe low-level functions
 for memory allocation, I/O, string, time, errors, etc.
@@ -37,7 +37,7 @@ Safer `malloc()` and `free()`
 int main(int argc, char * argv[])
 {
     const char * str = "foo bar";
-    // Calling malloc(0) is implemtentation-defined, ctk_malloc(0) return NULL
+    // Calling malloc(0) is implementation-defined, ctk_malloc(0) return NULL
     // in this case.
     char * str_cpy = ctk_malloc(0);
     // Will trigger because of the above. Some implementations of malloc()
@@ -65,7 +65,7 @@ int main(int argc, char * argv[])
 }
 ```
 
-Time string formating
+Time string formatting
 
 ```c
 #include <stdio.h>
