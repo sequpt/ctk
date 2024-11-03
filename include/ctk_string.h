@@ -40,7 +40,7 @@
  * ctk_strerror_r().
  *
  * - There doesn't seem to be an easy way to ask for the length of a `errno`
- *   message(appart from `strerrorlen_s()` but nobody implements Annex K).
+ *   message(apart from `strerrorlen_s()` but nobody implements Annex K).
  * - The longest error message on Linux is 49 characters(not including the null
  *   terminator) for the English language but other languages could take more
  *   space, especially those using more than one byte for a letter.
@@ -85,7 +85,7 @@ char * ctk_stpcpy(char * restrict dest, const char * restrict src);
  *   (including a null character if found but stopping at it) into the character
  *   array pointed by \p{dest}.
  * - If \p{src} is pointing to a null-terminated string shorter than \p{cnt},
- *   null characters are apprended to the array pointed by \p{dest} until
+ *   null characters are appended to the array pointed by \p{dest} until
  *   \p{cnt} characters haven been written to it in total.
  *
  * @param[out] dest : The array where to copy \p{src}.
@@ -146,7 +146,7 @@ int ctk_strerror_r(int errnum, char * result, size_t length);
  * Finds the first position of \p{substr} in \p{str}.
  *
  * - Terminating null characters are excluded from the search.
- * - Both \p{str} and \p{substr} can be string litterals.
+ * - Both \p{str} and \p{substr} can be string literals.
  *
  * @param[in] str    : The string to search in.
  * @param[in] substr : The string to search for.
@@ -169,7 +169,7 @@ ptrdiff_t ctk_strpos(const char * str, const char * substr);
  * Finds the last position of \p{substr} in \p{str}.
  *
  * - Terminating null characters are excluded from the search.
- * - Both \p{str} and \p{substr} can be string litterals.
+ * - Both \p{str} and \p{substr} can be string literals.
  *
  * @param[in] str    : The string to search in.
  * @param[in] substr : The string to search for.
@@ -192,7 +192,7 @@ ptrdiff_t ctk_strrpos(const char * str, const char * substr);
  * Finds the last occurrence of \p{substr} in \p{str}.
  *
  * - Terminating null characters are excluded from the search.
- * - Both \p{str} and \p{substr} can be string litterals.
+ * - Both \p{str} and \p{substr} can be string literals.
  *
  * @param[in] str    : The string to search in.
  * @param[in] substr : The string to search for.

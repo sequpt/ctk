@@ -204,7 +204,7 @@ static void TEST_ctk_strpos(void)
     assert(ctk_strpos("a", "a") == 0);
     // Haystack and needle are multiple char long and match exactly
     assert(ctk_strpos(">X,3?in.a{g>>qRc", ">X,3?in.a{g>>qRc") == 0);
-    // Needle is at the beggining of haystack
+    // Needle is at the beginning of haystack
     assert(ctk_strpos(">X,3?in.a{g>>qRc", ">X,3?in") == 0);
     // Needle is in the middle of haystack
     assert(ctk_strpos(">X,3?in.a{g>>qRc", "in.a{g>") == 5);
@@ -261,7 +261,7 @@ static void TEST_ctk_strrpos(void)
     assert(ctk_strrpos("a", "a") == 0);
     // Haystack and needle are multiple char long and match exactly
     assert(ctk_strrpos(">X,3?in.a{g>>qRc", ">X,3?in.a{g>>qRc") == 0);
-    // Needle is at the beggining of haystack
+    // Needle is at the beginning of haystack
     assert(ctk_strrpos(">X,3?in.a{g>>qRc", ">X,3?in") == 0);
     // Needle is in the middle of haystack
     assert(ctk_strrpos(">X,3?in.a{g>>qRc", "in.a{g>") == 5);
@@ -318,7 +318,7 @@ static void TEST_ctk_strrstr(void)
     assert(strcmp(ctk_strrstr("a", "a"), "a") == 0);
     // Haystack and needle are multiple char long and match exactly
     assert(strcmp(ctk_strrstr(">X,3?in.a{g>>qRc", ">X,3?in.a{g>>qRc"), ">X,3?in.a{g>>qRc") == 0);
-    // Needle is at the beggining of haystack
+    // Needle is at the beginning of haystack
     assert(strcmp(ctk_strrstr(">X,3?in.a{g>>qRc", ">X,3?in"), ">X,3?in.a{g>>qRc") == 0);
     // Needle is in the middle of haystack
     assert(strcmp(ctk_strrstr(">X,3?in.a{g>>qRc", "in.a{g>"), "in.a{g>>qRc") == 0);
