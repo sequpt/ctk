@@ -4,7 +4,7 @@
 
 Please, search the issue list to see if the bug is already reported or not.
 
-1. [Open](https://gitlab.com/callback/ctk/-/issues/new) an issue.
+1. [Open](https://gitlab.com/sequpt/ctk/-/issues/new) an issue.
 2. Select the `Bug` template.
 3. Fill the template sections.
 
@@ -12,7 +12,7 @@ Please, search the issue list to see if the bug is already reported or not.
 
 If you want to submit a new feature, please open an issue first to discuss it.
 
-1. [Fork](https://gitlab.com/callback/ctk/-/forks/new) the repository.
+1. [Fork](https://gitlab.com/sequpt/ctk/-/forks/new) the repository.
 2. Create a branch based on `master`.
 3. Make your changes.
 4. Add tests for them if they don't already exist.
