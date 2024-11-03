@@ -1,8 +1,11 @@
 // SPDX-License-Identifier: 0BSD
 /*!
  * @file
+ * @date 03.03.2018
  * @license{
  * BSD Zero Clause License
+ *
+ * Copyright (c) 2018 by the ctk authors
  *
  * Permission to use, copy, modify, and/or distribute this software for any
  * purpose with or without fee is hereby granted.
