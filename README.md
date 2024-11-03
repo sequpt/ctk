@@ -152,11 +152,11 @@ A `C11` compliant compiler is needed to compile the code.
 
 ### Installation
 
-[Download](https://gitlab.com/callback/ctk/-/archive/master/ctk-master.zip) or
+[Download](https://gitlab.com/sequpt/ctk/-/archive/master/ctk-master.zip) or
 clone the repository:
 
 ```console
-git clone https://gitlab.com/callback/ctk.git
+git clone https://gitlab.com/sequpt/ctk.git
 ```
 
 Optionally run the tests:
@@ -184,7 +184,7 @@ paths.
 
 ## Documentation
 
-Doxygen documentation is available here: <https://callback.gitlab.io/ctk>
+Doxygen documentation is available here: <https://sequpt.gitlab.io/ctk>
 
 ## Versioning
 
